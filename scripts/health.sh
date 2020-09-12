@@ -17,8 +17,6 @@ do
   RESPONSE=$(curl -s http://localhost:${IDLE_PORT}/profile)
   UP_COUNT=$(echo ${RESPONSE} | grep 'real' | wc -l)
 
-  echo "> RESPONSE: ${RESPONSE}"
-
   if [ ${UP_COUNT} -ge 1 ]
   then
     # $UP_COUNT >= 1
